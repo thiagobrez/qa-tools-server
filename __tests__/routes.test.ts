@@ -7,20 +7,25 @@ afterAll(async () => {
   await connection.close();
 });
 
+const user = {
+  email: 'thiago@email.com',
+  firstName: 'Thiago',
+  lastName: 'Brezinski',
+};
+
+it('creates user', async () => {
+  const res = await request(app)
+    .post('/users')
+    .send(user);
+
+  expect(res.status).toBe(200);
+});
+
 it('reads all users', async () => {
   const res = await request(app).get('/users');
-  const thiago = {
-    _id: '5d38aa3ec832580ef81c3ed7',
-    email: 'thiago@email.com',
-    firstName: 'Thiago',
-    lastName: 'Brezinski',
-    createdAt: '2019-07-24T18:58:06.350Z',
-    updatedAt: '2019-07-24T18:58:06.350Z',
-    __v: 0,
-  };
 
   expect(res.status).toBe(200);
   expect(res.body).toBeInstanceOf(Array);
-  expect(res.body).toContainEqual(thiago);
-  expect(res.body).toMatchSnapshot();
+  expect(res.body).toEqual(expect.arrayContaining([expect.objectContaining(user)]));
+  expect(res.body[0]).toMatchSnapshot();
 });
