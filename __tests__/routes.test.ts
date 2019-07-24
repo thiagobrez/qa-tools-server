@@ -27,5 +27,4 @@ it('reads all users', async () => {
   expect(res.status).toBe(200);
   expect(res.body).toBeInstanceOf(Array);
   expect(res.body).toEqual(expect.arrayContaining([expect.objectContaining(user)]));
-  expect(res.body[0]).toMatchSnapshot();
 });
