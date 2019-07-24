@@ -1,25 +1,50 @@
 {
-  "name": "server",
-  "version": "0.0.0",
-  "private": true,
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
   "scripts": {
-    "start": "node ./bin/www",
-    "test": "jest"
+    "dev": "nodemon src/server.ts",
+    "test": "tsc && jest --watchAll=false"
   },
   "dependencies": {
-    "cookie-parser": "~1.4.4",
-    "debug": "~2.6.9",
-    "express": "~4.16.1",
-    "morgan": "~1.9.1"
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.19",
+    "sucrase": "^3.10.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-typescript": "^7.3.3",
+    "@types/cors": "^2.8.4",
+    "@types/express": "^4.16.1",
+    "@types/jest": "^24.0.15",
+    "@types/mongodb": "^3.1.22",
+    "@types/mongoose": "^5.3.23",
+    "@typescript-eslint/eslint-plugin": "^1.4.2",
+    "@typescript-eslint/parser": "^1.4.2",
+    "babel-jest": "^24.8.0",
+    "coveralls": "^3.0.5",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "jest": "^24.8.0",
+    "nodemon": "^1.18.10",
+    "prettier": "^1.16.4",
+    "rimraf": "^2.6.3",
+    "supertest": "^4.0.2",
+    "typescript": "^3.3.3333"
   },
   "config": {
     "commitizen": {
       "path": "cz-conventional-changelog"
     }
-  },
-  "devDependencies": {
-    "coveralls": "^3.0.5",
-    "jest": "^24.8.0",
-    "supertest": "^4.0.2"
   }
 }
