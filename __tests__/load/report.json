@@ -1,0 +1,112 @@
+{
+  "aggregate": {
+    "timestamp": "2019-07-26T21:07:35.296Z",
+    "scenariosCreated": 5,
+    "scenariosCompleted": 5,
+    "requestsCompleted": 25,
+    "latency": {
+      "min": 216.8,
+      "max": 681.3,
+      "median": 222.5,
+      "p95": 679.4,
+      "p99": 681.3
+    },
+    "rps": {
+      "count": 25,
+      "mean": 4.19
+    },
+    "scenarioDuration": {
+      "min": 1564.7,
+      "max": 1644.6,
+      "median": 1573.1,
+      "p95": 1644.6,
+      "p99": 1644.6
+    },
+    "scenarioCounts": {
+      "0": 5
+    },
+    "errors": {},
+    "codes": {
+      "200": 20,
+      "404": 5
+    },
+    "matches": 0,
+    "customStats": {},
+    "counters": {},
+    "scenariosAvoided": 0,
+    "phases": [
+      {
+        "duration": 5,
+        "arrivalRate": 1,
+        "name": "Warm up the application"
+      }
+    ]
+  },
+  "intermediate": [
+    {
+      "timestamp": "2019-07-26T21:07:35.295Z",
+      "scenariosCreated": 5,
+      "scenariosCompleted": 5,
+      "requestsCompleted": 25,
+      "latency": {
+        "min": 216.8,
+        "max": 681.3,
+        "median": 222.5,
+        "p95": 679.4,
+        "p99": 681.3
+      },
+      "rps": {
+        "count": 25,
+        "mean": 4.19
+      },
+      "scenarioDuration": {
+        "min": 1564.7,
+        "max": 1644.6,
+        "median": 1573.1,
+        "p95": 1644.6,
+        "p99": 1644.6
+      },
+      "scenarioCounts": {
+        "0": 5
+      },
+      "errors": {},
+      "codes": {
+        "200": 20,
+        "404": 5
+      },
+      "matches": 0,
+      "latencies": [
+        674106844,
+        228865891,
+        226178282,
+        220517890,
+        231156591,
+        681305050,
+        219876597,
+        218580346,
+        216835372,
+        225678013,
+        678740955,
+        221711509,
+        217769393,
+        217006368,
+        224397014,
+        666119403,
+        220302991,
+        223690401,
+        219287102,
+        223828288,
+        667162559,
+        221878962,
+        221738392,
+        221270843,
+        222455317
+      ],
+      "customStats": {},
+      "counters": {},
+      "concurrency": 0,
+      "pendingRequests": 0,
+      "scenariosAvoided": 0
+    }
+  ]
+}
