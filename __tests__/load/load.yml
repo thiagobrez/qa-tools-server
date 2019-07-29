@@ -1,0 +1,21 @@
+config:
+  target: "http://localhost:3333"
+  processor: "./randomData.js"
+  tls:
+    rejectUnauthorized: false
+  phases:
+    - duration: 60
+      arrivalRate: 10
+      rampTo: 50
+      name: "Warm up the application"
+#    - duration: 600
+#      arrivalRate: 50
+#      name: "Sustained max load"
+  defaults:
+    headers:
+      Accept: "application/json, text/plain, */*"
+      Content-Type: "application/json"
+scenarios:
+  - flow:
+      - get:
+          url: "/users"
