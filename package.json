@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "nodemon src/server.ts",
-    "test": "tsc && jest --watchAll=false"
+    "test": "tsc && jest --watchAll=false",
+    "lint": "eslint 'src/**'"
   },
   "dependencies": {
     "cors": "^2.8.5",
@@ -36,6 +37,7 @@
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
+    "husky": "^3.0.1",
     "jest": "^24.8.0",
     "nodemon": "^1.18.10",
     "prettier": "^1.16.4",
@@ -46,6 +48,11 @@
   "config": {
     "commitizen": {
       "path": "cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint && yarn test"
     }
   }
 }
