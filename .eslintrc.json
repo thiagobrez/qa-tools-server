@@ -8,8 +8,7 @@
   "extends": [
     "plugin:@typescript-eslint/recommended",
     "prettier/@typescript-eslint",
-    "airbnb-base",
-    "plugin:prettier/recommended"
+    "airbnb-base"
   ],
   "globals": {
     "Atomics": "readonly",
@@ -19,9 +18,7 @@
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
-  "plugins": [
-    "@typescript-eslint"
-  ],
+  "plugins": ["@typescript-eslint"],
   "rules": {
     "import/prefer-default-export": "off",
     "class-methods-use-this": "off",
@@ -49,12 +46,7 @@
   "settings": {
     "import/resolver": {
       "node": {
-        "extensions": [
-          ".js",
-          ".jsx",
-          ".ts",
-          ".tsx"
-        ]
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
       }
     }
   }
