@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "nodemon src/server.ts",
     "test": "tsc && jest --watchAll=false",
-    "lint": "eslint 'src/**'"
+    "lint": "eslint 'src/**'",
+    "release": "standard-version"
   },
   "dependencies": {
     "cors": "^2.8.5",
@@ -44,6 +45,7 @@
     "nodemon": "^1.18.10",
     "prettier": "^1.16.4",
     "rimraf": "^2.6.3",
+    "standard-version": "^7.0.0",
     "supertest": "^4.0.2",
     "typescript": "^3.3.3333"
   },
